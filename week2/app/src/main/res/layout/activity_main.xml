@@ -7,76 +7,26 @@
 
     <FrameLayout
         android:id="@+id/frame_fragment"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation" />
 
-    </FrameLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:background="#FFFFFF"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="#FBF2F2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="@color/color_selector"
+        app:itemTextColor="@color/color_selector"
+        app:menu="@menu/navigation_menu" />
 
-        <ImageButton
-            android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:tint="@color/no_nav_color"
-            app:srcCompat="@drawable/home"
-             />
-
-        <ImageButton
-            android:id="@+id/bag"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:tint="@color/no_nav_color"
-            app:srcCompat="@drawable/shopping_bag" />
-
-        <ImageButton
-            android:id="@+id/fav"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:tint="@color/no_nav_color"
-            app:srcCompat="@drawable/fav" />
-
-        <ImageButton
-            android:id="@+id/receipt"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:tint="@color/no_nav_color"
-            app:srcCompat="@drawable/baseline_receipt_24" />
-
-        <ImageButton
-            android:id="@+id/mypage"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:tint="@color/no_nav_color"
-            app:srcCompat="@drawable/face" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
